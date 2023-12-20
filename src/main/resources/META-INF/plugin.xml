@@ -2,21 +2,21 @@
     <id>com.maxifom.pyenv-integration</id>
     <name>PyEnv Integration</name>
     <vendor email="fominykh.max@gmail.com" url="https://maxifom.com">maxifom</vendor>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <description><![CDATA[
     This plugin help integrate PyEnv into IntelliJ IDEA-based IDEs
     ]]></description>
-
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
 
-
-    <idea-version since-build="183.*"/>
+    <idea-version since-build="231"/>
 
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.maxifom.pyenv_integration.PluginSettings"/>
+        <notificationGroup id="pyenv-integration"
+                           displayType="BALLOON" />
     </extensions>
 
     <actions>
